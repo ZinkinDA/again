@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
         /*
-             Считывам из консоли число с
+             Считываем из консоли число с
          */
         int c = 0;
         Scanner scanner = new Scanner(System.in);
@@ -35,7 +35,7 @@ public class Main {
         if(!file.exists()){
 
             /*
-                Cкорее всего может быть какоя-то ошибка в имени при создании,
+                Cкорее всего может быть какая-то ошибка в имени при создании,
                 но мы его имя указали в переменной filename.
              */
             try {
@@ -48,7 +48,7 @@ public class Main {
         scanner = new Scanner(file);
         String[] str = scanner.nextLine().split(" ");
         function(str,c);
-
+        scanner.close();
     }
 
 
@@ -66,7 +66,7 @@ public class Main {
         }
 
 
-        StringBuilder result = new StringBuilder("Все элементы : " + queue.toString() + "\n");
+        StringBuilder result = new StringBuilder("Все элементы : " + queue + "\n");
         StringBuilder stringBuilderMinC = new StringBuilder("Меньше c : ");
         StringBuilder stringBuilderC = new StringBuilder("c : ");
         StringBuilder stringBuilderMaxC = new StringBuilder("Больше с : ");
